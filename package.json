@@ -1,0 +1,27 @@
+{
+  "name": "@fg/event-sourcing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlowerGeoji/EventSourcing.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "FlowerGeoji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlowerGeoji/EventSourcing/issues"
+  },
+  "homepage": "https://github.com/FlowerGeoji/EventSourcing#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0"
+  }
+}
