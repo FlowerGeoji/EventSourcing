@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc & zip function.zip ./dist/index.js",
+    "create:lambda": "yarn build & aws lambda create-function --profile flowergeoji-fg --function-name LambdaFunctionTest --zip-file fileb://function.zip --handler index.handler --runtime nodejs12.x --role arn:aws:iam::820263786735:role/lambda-apigateway-test-role",
+    "update:lambda": "yarn build & aws lambda update-function-code --profile flowergeoji-fg --function-name LambdaFunctionTest --zip-file fileb://function.zip"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,12 @@
   },
   "homepage": "https://github.com/FlowerGeoji/EventSourcing#readme",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.56",
+    "@types/aws-sdk": "^2.7.0",
     "@types/jest": "^26.0.0",
+    "aws-sdk": "^2.702.0",
     "jest": "^26.0.1",
-    "ts-jest": "^26.1.0"
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5"
   }
 }
